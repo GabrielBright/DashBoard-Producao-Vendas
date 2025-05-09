@@ -114,10 +114,11 @@ def carregar_producao(caminho_arquivo, ano_coluna):
         raise Exception(f"Erro ao carregar produção: {str(e)}")
 
 arquivos = {
-    "2023": ["excel_files/siteautoveiculos2023.xlsx", '2023'],
-    "2024": ["excel_files/siteautoveiculos2024.xlsx", '2024'],
-    "2025": ["excel_files/siteautoveiculos2025.xlsx", '2025'],
+    "2023": ["excel_files/siteautoveiculos2023.xlsx", "2023"],
+    "2024": ["excel_files/siteautoveiculos2024.xlsx", "2024"],
+    "2025": ["excel_files/siteautoveiculos2025.xlsx", "2025"]
 }
+
 
 def inicializar_dados():
     global DADOS_VENDAS, DADOS_PRODUCAO
