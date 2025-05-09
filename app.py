@@ -336,7 +336,9 @@ def atualizar(tipo, r_leves, r_pesados):
     return cards, fig_linha_leves, fig_barra_leves, fig_linha_pesados, fig_barra_pesados, slider_leves_text, slider_pesados_text, error_message
 
 if __name__ == "__main__":
+    import os
     try:
-        app.run_server()  
+        port = int(os.environ.get("PORT", 8050))  
+        app.run_server(host="0.0.0.0", port=port)  
     except Exception as e:
         print(f"Erro ao iniciar o servidor Dash: {e}")
